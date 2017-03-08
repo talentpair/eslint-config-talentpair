@@ -1,0 +1,33 @@
+{
+  "name": "eslint-config-talentpair",
+  "version": "1.0.0",
+  "description": "ESLint Configuration for Talentpair (talentpair.com)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talentpair/eslint-config-talentpair.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "author": "Talentpair",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/talentpair/eslint-config-talentpair/issues"
+  },
+  "homepage": "https://github.com/talentpair/eslint-config-talentpair#readme",
+  "peerDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-angular": "^1.6.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-talentpair": "0.0.3"
+  }
+}
