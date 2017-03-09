@@ -27,7 +27,7 @@ module.exports = {
     // Airbnb Rule Overrides
     camelcase: 'off',
     'func-names': 'error',
-    'max-len': ['error', 150, 'error', {
+    'max-len': ['error', 150, 2, {
       ignoreUrls: true,
       ignoreComments: false,
       ignoreRegExpLiterals: true,
