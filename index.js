@@ -104,7 +104,7 @@ module.exports = {
     ],
     'flowtype/space-before-generic-bracket': 'error',
     'flowtype/space-before-type-colon': 'error',
-    'flowtype/type-id-match': 'warn',
+    'flowtype/type-id-match': ['warn', '^([A-Z][a-z0-9]*)+T$'],
     'flowtype/union-intersection-spacing': 'error',
     'flowtype/use-flow-type': 'warn',
   },
