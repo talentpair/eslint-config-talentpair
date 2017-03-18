@@ -21,7 +21,7 @@ module.exports = {
     jest: true,
   },
 
-  plugins: ['angular', 'talentpair'],
+  plugins: ['angular', 'flowtype', 'talentpair'],
 
   rules: {
     // Airbnb Rule Overrides
@@ -81,5 +81,37 @@ module.exports = {
 
     // Talentpair Rules
     'talentpair/no-template-url': 'error',
+
+    // Flowtype Rules
+    'flowtype/boolean-style': 'error',
+    'flowtype/define-flow-type': 'warn',
+    'flowtype/delimiter-dangle': ['error', 'always-multiline'],
+    'flowtype/generic-spacing': 'error',
+    'flowtype/no-dupe-keys': 'error',
+    'flowtype/no-primitive-constructor-types': 'error',
+    'flowtype/no-weak-types': 'warn',
+    'flowtype/object-type-delimiter': 'error',
+    'flowtype/require-parameter-type': 'warn',
+    'flowtype/require-return-type': 'warn',
+    'flowtype/require-valid-file-annotation': 'warn',
+    'flowtype/require-variable-type': 'warn',
+    'flowtype/semi': 'error',
+    'flowtype/sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
+    'flowtype/space-after-type-colon': [
+      'error',
+      'always',
+      { 'allowLineBreak': true }
+    ],
+    'flowtype/space-before-generic-bracket': 'error',
+    'flowtype/space-before-type-colon': 'error',
+    'flowtype/type-id-match': 'warn',
+    'flowtype/union-intersection-spacing': 'error',
+    'flowtype/use-flow-type': 'warn',
+  },
+
+  settings: {
+    flowtype: {
+      onlyFilesWithFlowAnnotation: true,
+    },
   },
 };
