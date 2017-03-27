@@ -107,6 +107,9 @@ module.exports = {
     'flowtype/type-id-match': ['warn', '^([A-Z][a-z0-9]*)+T$'],
     'flowtype/union-intersection-spacing': 'error',
     'flowtype/use-flow-type': 'warn',
+
+    // React Overrides for Flow
+    'react/no-unused-prop-types': 'off',
   },
 
   settings: {
