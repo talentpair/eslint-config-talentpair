@@ -116,5 +116,6 @@ module.exports = {
     flowtype: {
       onlyFilesWithFlowAnnotation: true,
     },
+    'import/core-modules': [ 'gettysburg', 'jericho', 'kyoto' ],
   },
 };
