@@ -109,6 +109,7 @@ module.exports = {
     'flowtype/use-flow-type': 'warn',
 
     // React Overrides for Flow
+    // These can probably be removed at some point when bugs are worked out
     'react/no-unused-prop-types': 'off',
   },
 
