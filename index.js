@@ -91,8 +91,15 @@ module.exports = {
     'flowtype/no-primitive-constructor-types': 'error',
     'flowtype/no-weak-types': 'warn',
     'flowtype/object-type-delimiter': 'error',
-    'flowtype/require-parameter-type': 'warn',
-    'flowtype/require-return-type': 'warn',
+    'flowtype/require-parameter-type': [
+      'warn',
+      { "excludeArrowFunctions": "expressionsOnly" },
+    ],
+    "flowtype/require-return-type": [
+      'warn',
+      'always',
+      { 'excludeArrowFunctions': 'expressionsOnly' },
+    ],
     'flowtype/require-valid-file-annotation': 'warn',
     'flowtype/require-variable-type': 'warn',
     'flowtype/semi': 'error',
