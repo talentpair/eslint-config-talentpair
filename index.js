@@ -111,6 +111,21 @@ module.exports = {
     // React Overrides for Flow
     // These can probably be removed at some point when bugs are worked out
     'react/no-unused-prop-types': 'off',
+    'react/sort-comp': [
+      'error',
+      {
+        order: [
+          'static-methods',
+          '/^props$/',
+          'lifecycle',
+          '/^on.+$/',
+          '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+          'everything-else',
+          '/^render.+$/',
+          'render',
+        ],
+      },
+    ],
   },
 
   settings: {
