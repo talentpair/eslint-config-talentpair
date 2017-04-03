@@ -3,7 +3,7 @@ module.exports = {
 
   parser: 'babel-eslint',
 
-  extends: 'airbnb',
+  extends: ['airbnb', 'plugin:flowtype/recommended'],
 
   globals: {
     _: false,
@@ -83,10 +83,7 @@ module.exports = {
     'talentpair/no-template-url': 'error',
 
     // Flowtype Rules
-    'flowtype/boolean-style': 'error',
-    'flowtype/define-flow-type': 'warn',
     'flowtype/delimiter-dangle': ['error', 'always-multiline'],
-    'flowtype/generic-spacing': 'error',
     'flowtype/no-dupe-keys': 'error',
     'flowtype/no-primitive-constructor-types': 'error',
     'flowtype/no-weak-types': 'warn',
@@ -100,20 +97,23 @@ module.exports = {
       'always',
       { 'excludeArrowFunctions': 'expressionsOnly' },
     ],
-    'flowtype/require-valid-file-annotation': 'warn',
-    'flowtype/require-variable-type': 'warn',
+    'flowtype/require-valid-file-annotation': [
+      'error',
+      'always',
+      { annotationStyle: 'line' },
+    ],
     'flowtype/semi': 'error',
-    'flowtype/sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
+    'flowtype/sort-keys': [
+      'off',
+      'asc',
+      { caseSensitive: false, natural: true },
+    ],
     'flowtype/space-after-type-colon': [
       'error',
       'always',
       { 'allowLineBreak': true }
     ],
-    'flowtype/space-before-generic-bracket': 'error',
-    'flowtype/space-before-type-colon': 'error',
     'flowtype/type-id-match': ['warn', '^([A-Z][a-z0-9]*)+T$'],
-    'flowtype/union-intersection-spacing': 'error',
-    'flowtype/use-flow-type': 'warn',
 
     // React Overrides for Flow
     // These can probably be removed at some point when bugs are worked out
@@ -122,8 +122,8 @@ module.exports = {
       'error',
       {
         order: [
-          'static-methods',
           '/^props$/',
+          'static-methods',
           'lifecycle',
           '/^on.+$/',
           '/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
