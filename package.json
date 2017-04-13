@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-talentpair",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "ESLint Configuration for Talentpair (talentpair.com)",
   "main": "index.js",
   "scripts": {
