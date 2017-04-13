@@ -90,12 +90,12 @@ module.exports = {
     'flowtype/object-type-delimiter': 'error',
     'flowtype/require-parameter-type': [
       'warn',
-      { "excludeArrowFunctions": "expressionsOnly" },
+      { "excludeArrowFunctions": true },
     ],
     "flowtype/require-return-type": [
       'warn',
       'always',
-      { 'excludeArrowFunctions': 'expressionsOnly' },
+      { 'excludeArrowFunctions': true },
     ],
     'flowtype/require-valid-file-annotation': [
       'error',
