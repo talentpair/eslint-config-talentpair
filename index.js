@@ -6,14 +6,9 @@ module.exports = {
   extends: ["airbnb", "plugin:flowtype/recommended"],
 
   globals: {
-    _: false,
-    $: false,
     _LTracker: false,
     __insp: false,
-    angular: false,
-    jQuery: false,
-    mixpanel: false,
-    moment: false
+    mixpanel: false
   },
 
   env: {
@@ -21,7 +16,7 @@ module.exports = {
     jest: true
   },
 
-  plugins: ["angular", "flowtype", "talentpair"],
+  plugins: ["flowtype"],
 
   rules: {
     // Airbnb Rule Overrides
@@ -47,15 +42,18 @@ module.exports = {
       "error",
       {
         selector: "ForInStatement",
-        message: "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+        message:
+          "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
       },
       {
         selector: "LabeledStatement",
-        message: "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+        message:
+          "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
       },
       {
         selector: "WithStatement",
-        message: "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+        message:
+          "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
       }
     ],
     "no-underscore-dangle": "off",
@@ -78,33 +76,6 @@ module.exports = {
         optionalDependencies: false
       }
     ],
-
-    // Angular rules overrides
-    "angular/controller-as-vm": "off",
-    "angular/controller-name": ["error", "/[A-Z]*Controller$/"],
-    "angular/definedundefined": "off",
-    "angular/di": "off",
-    "angular/di-unused": "off",
-    "angular/document-service": "off",
-    "angular/foreach": "off",
-    "angular/json-functions": "off",
-    "angular/module-getter": "off",
-    "angular/module-setter": "off",
-    "angular/no-private-call": "off",
-    "angular/no-service-method": "off",
-    "angular/no-services": "off",
-    "angular/on-watch": "off",
-    "angular/typecheck-array": "off",
-    "angular/typecheck-date": "off",
-    "angular/typecheck-function": "off",
-    "angular/typecheck-number": "off",
-    "angular/typecheck-object": "off",
-    "angular/typecheck-regexp": "off",
-    "angular/typecheck-string": "off",
-    "angular/window-service": "off",
-
-    // Talentpair Rules
-    "talentpair/no-template-url": "error",
 
     // Flowtype Rules
     "flowtype/delimiter-dangle": ["error", "always-multiline"],
@@ -144,6 +115,6 @@ module.exports = {
     flowtype: {
       onlyFilesWithFlowAnnotation: true
     },
-    "import/core-modules": ["gettysburg", "jericho", "kyoto"]
+    "import/core-modules": ["kyoto"]
   }
 };
