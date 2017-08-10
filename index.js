@@ -37,7 +37,6 @@ module.exports = {
     ],
     "no-param-reassign": "off",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
-    "no-restricted-imports": ["warn", "angular", "underscore", "jquery"],
     "no-restricted-syntax": [
       "error",
       {
