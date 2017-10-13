@@ -1,3 +1,5 @@
+const restrictedGlobals = require("eslint-restricted-globals");
+
 module.exports = {
   root: true,
 
@@ -8,12 +10,12 @@ module.exports = {
   globals: {
     _LTracker: false,
     __insp: false,
-    mixpanel: false
+    mixpanel: false,
   },
 
   env: {
     browser: true,
-    jest: true
+    jest: true,
   },
 
   plugins: ["flowtype"],
@@ -32,28 +34,31 @@ module.exports = {
         ignoreTrailingComments: true,
         ignoreRegExpLiterals: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }
+        ignoreTemplateLiterals: true,
+      },
     ],
     "no-param-reassign": "off",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
+    "no-restricted-globals": ["error", "isFinite", "isNaN"]
+      .concat(restrictedGlobals)
+      .filter(g => !["location", "history"].includes(g)),
     "no-restricted-syntax": [
       "error",
       {
         selector: "ForInStatement",
         message:
-          "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+          "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
       },
       {
         selector: "LabeledStatement",
         message:
-          "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+          "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
       },
       {
         selector: "WithStatement",
         message:
-          "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
-      }
+          "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
+      },
     ],
     "no-underscore-dangle": "off",
     "no-unused-expressions": ["error", { allowTernary: true }],
@@ -70,10 +75,10 @@ module.exports = {
           "**/*.test.js",
           "**/*.test.jsx",
           "**/webpack.config.js",
-          "**/webpack.config.*.js"
+          "**/webpack.config.*.js",
         ],
-        optionalDependencies: false
-      }
+        optionalDependencies: false,
+      },
     ],
 
     // Flowtype Rules
@@ -104,16 +109,16 @@ module.exports = {
           "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
           "everything-else",
           "/^render.+$/",
-          "render"
-        ]
-      }
-    ]
+          "render",
+        ],
+      },
+    ],
   },
 
   settings: {
     flowtype: {
-      onlyFilesWithFlowAnnotation: true
+      onlyFilesWithFlowAnnotation: true,
     },
-    "import/core-modules": ["kyoto"]
-  }
+    "import/core-modules": ["kyoto"],
+  },
 };
