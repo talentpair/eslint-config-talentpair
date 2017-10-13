@@ -62,6 +62,13 @@ module.exports = {
     ],
     "no-underscore-dangle": "off",
     "no-unused-expressions": ["error", { allowTernary: true }],
+    "object-curly-newline": [
+      "error",
+      {
+        ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
+        ObjectPattern: { multiline: true, consistent: true },
+      },
+    ],
     "padded-blocks": "off",
     quotes: ["error", "double", { avoidEscape: true }],
     radix: "off",
