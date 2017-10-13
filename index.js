@@ -24,6 +24,14 @@ module.exports = {
     // Airbnb Rule Overrides
     camelcase: "off",
     "func-names": "error",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["to"],
+        aspects: ["noHref", "invalidHref", "preferButton"],
+      },
+    ],
     "max-len": [
       "error",
       120,
