@@ -24,6 +24,7 @@ module.exports = {
     // Airbnb Rule Overrides
     camelcase: "off",
     "func-names": "error",
+    "function-paren-newline": ["error", "multiline"],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
@@ -73,11 +74,12 @@ module.exports = {
     "object-curly-newline": [
       "error",
       {
-        ObjectExpression: { minProperties: 4, multiline: true, consistent: true },
+        ObjectExpression: { multiline: true, consistent: true },
         ObjectPattern: { multiline: true, consistent: true },
       },
     ],
     "padded-blocks": "off",
+    "prefer-destructuring": "off",
     quotes: ["error", "double", { avoidEscape: true }],
     radix: "off",
 
