@@ -24,7 +24,7 @@ module.exports = {
     // Airbnb Rule Overrides
     camelcase: "off",
     "func-names": "error",
-    "function-paren-newline": ["error", "multiline"],
+    "function-paren-newline": ["error", "consistent"],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
