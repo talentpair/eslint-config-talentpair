@@ -25,14 +25,6 @@ module.exports = {
     camelcase: "off",
     "func-names": "error",
     "function-paren-newline": ["error", "consistent"],
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        components: ["Link"],
-        specialLink: ["to"],
-        aspects: ["noHref", "invalidHref", "preferButton"],
-      },
-    ],
     "max-len": [
       "error",
       120,
@@ -48,6 +40,7 @@ module.exports = {
     ],
     "no-param-reassign": "off",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
+    "no-prototype-builtins": "off",
     "no-restricted-globals": ["error", "isFinite", "isNaN"]
       .concat(restrictedGlobals)
       .filter(g => !["location", "history"].includes(g)),
@@ -70,7 +63,7 @@ module.exports = {
       },
     ],
     "no-underscore-dangle": "off",
-    "no-unused-expressions": ["error", { allowTernary: true }],
+    "no-unused-expressions": "off",
     "object-curly-newline": [
       "error",
       {
@@ -82,6 +75,15 @@ module.exports = {
     "prefer-destructuring": "off",
     quotes: ["error", "double", { avoidEscape: true }],
     radix: "off",
+
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        components: ["Link"],
+        specialLink: ["to"],
+        aspects: ["noHref", "invalidHref", "preferButton"],
+      },
+    ],
 
     // Import overrides
     "import/no-extraneous-dependencies": [
@@ -97,6 +99,7 @@ module.exports = {
         optionalDependencies: false,
       },
     ],
+    "import/prefer-default-export": "off",
 
     // Flowtype Rules
     "flowtype/delimiter-dangle": ["error", "always-multiline"],
@@ -119,11 +122,15 @@ module.exports = {
       "error",
       {
         order: [
-          "/^props$/",
+          "type-annotations",
+          "instance-variables",
           "static-methods",
           "lifecycle",
           "/^on.+$/",
+          "getters",
+          "setters",
           "/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/",
+          "instance-methods",
           "everything-else",
           "/^render.+$/",
           "render",
