@@ -10,12 +10,12 @@ module.exports = {
   globals: {
     _LTracker: false,
     __insp: false,
-    mixpanel: false,
+    mixpanel: false
   },
 
   env: {
     browser: true,
-    jest: true,
+    jest: true
   },
 
   plugins: ["flowtype"],
@@ -35,8 +35,8 @@ module.exports = {
         ignoreTrailingComments: true,
         ignoreRegExpLiterals: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true,
-      },
+        ignoreTemplateLiterals: true
+      }
     ],
     "no-param-reassign": "off",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
@@ -49,18 +49,18 @@ module.exports = {
       {
         selector: "ForInStatement",
         message:
-          "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
+          "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
       },
       {
         selector: "LabeledStatement",
         message:
-          "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
+          "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
       },
       {
         selector: "WithStatement",
         message:
-          "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
-      },
+          "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
     ],
     "no-underscore-dangle": "off",
     "no-unused-expressions": "off",
@@ -68,8 +68,8 @@ module.exports = {
       "error",
       {
         ObjectExpression: { multiline: true, consistent: true },
-        ObjectPattern: { multiline: true, consistent: true },
-      },
+        ObjectPattern: { multiline: true, consistent: true }
+      }
     ],
     "padded-blocks": "off",
     "prefer-destructuring": "off",
@@ -81,8 +81,8 @@ module.exports = {
       {
         components: ["Link"],
         specialLink: ["to"],
-        aspects: ["noHref", "invalidHref", "preferButton"],
-      },
+        aspects: ["noHref", "invalidHref", "preferButton"]
+      }
     ],
 
     // Import overrides
@@ -94,10 +94,11 @@ module.exports = {
           "**/*.test.js",
           "**/*.test.jsx",
           "**/webpack.config.js",
-          "**/webpack.config.*.js",
+          "**/webpack.config.*.js"
         ],
-        optionalDependencies: false,
-      },
+        packageDir: ["./", "../"],
+        optionalDependencies: false
+      }
     ],
     "import/prefer-default-export": "off",
 
@@ -107,12 +108,31 @@ module.exports = {
     "flowtype/no-primitive-constructor-types": "error",
     "flowtype/no-weak-types": "warn",
     "flowtype/object-type-delimiter": "error",
-    "flowtype/require-parameter-type": ["warn", { excludeArrowFunctions: true }],
-    "flowtype/require-return-type": ["warn", "always", { excludeArrowFunctions: true }],
-    "flowtype/require-valid-file-annotation": ["error", "always", { annotationStyle: "line" }],
+    "flowtype/require-parameter-type": [
+      "warn",
+      { excludeArrowFunctions: true }
+    ],
+    "flowtype/require-return-type": [
+      "warn",
+      "always",
+      { excludeArrowFunctions: true }
+    ],
+    "flowtype/require-valid-file-annotation": [
+      "error",
+      "always",
+      { annotationStyle: "line" }
+    ],
     "flowtype/semi": "error",
-    "flowtype/sort-keys": ["off", "asc", { caseSensitive: false, natural: true }],
-    "flowtype/space-after-type-colon": ["error", "always", { allowLineBreak: true }],
+    "flowtype/sort-keys": [
+      "off",
+      "asc",
+      { caseSensitive: false, natural: true }
+    ],
+    "flowtype/space-after-type-colon": [
+      "error",
+      "always",
+      { allowLineBreak: true }
+    ],
     "flowtype/type-id-match": ["warn", "^([A-Z][a-z0-9]*)+T$"],
 
     // React Overrides for Flow
@@ -133,16 +153,15 @@ module.exports = {
           "instance-methods",
           "everything-else",
           "/^render.+$/",
-          "render",
-        ],
-      },
-    ],
+          "render"
+        ]
+      }
+    ]
   },
 
   settings: {
     flowtype: {
-      onlyFilesWithFlowAnnotation: true,
-    },
-    "import/core-modules": ["kyoto"],
-  },
+      onlyFilesWithFlowAnnotation: true
+    }
+  }
 };
