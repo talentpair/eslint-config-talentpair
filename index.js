@@ -97,11 +97,6 @@ module.exports = {
       "always",
       { excludeArrowFunctions: true }
     ],
-    "flowtype/require-valid-file-annotation": [
-      "warn",
-      "always",
-      { annotationStyle: "line" }
-    ],
     "flowtype/sort-keys": [
       "off",
       "asc",
