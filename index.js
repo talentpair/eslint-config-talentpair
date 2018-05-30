@@ -98,7 +98,7 @@ module.exports = {
       { excludeArrowFunctions: true }
     ],
     "flowtype/require-valid-file-annotation": [
-      "warning",
+      "warn",
       "always",
       { annotationStyle: "line" }
     ],
