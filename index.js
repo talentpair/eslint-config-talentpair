@@ -5,7 +5,15 @@ module.exports = {
 
   parser: "babel-eslint",
 
-  extends: ["airbnb", "plugin:flowtype/recommended"],
+  extends: [
+    "airbnb",
+    "plugin:flowtype/recommended",
+    "prettier",
+    "prettier/flowtype",
+    "prettier/react"
+  ],
+
+  plugins: ["flowtype"],
 
   globals: {
     _LTracker: false,
@@ -18,26 +26,10 @@ module.exports = {
     jest: true
   },
 
-  plugins: ["flowtype"],
-
   rules: {
     // Airbnb Rule Overrides
     camelcase: "off",
     "func-names": "error",
-    "function-paren-newline": ["error", "consistent"],
-    "max-len": [
-      "error",
-      120,
-      2,
-      {
-        ignoreUrls: true,
-        ignoreComments: false,
-        ignoreTrailingComments: true,
-        ignoreRegExpLiterals: true,
-        ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }
-    ],
     "no-param-reassign": "off",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
     "no-prototype-builtins": "off",
@@ -64,17 +56,7 @@ module.exports = {
     ],
     "no-underscore-dangle": "off",
     "no-unused-expressions": "off",
-    "object-curly-newline": [
-      "error",
-      {
-        ObjectExpression: { multiline: true, consistent: true },
-        ObjectPattern: { multiline: true, consistent: true }
-      }
-    ],
-    "padded-blocks": "off",
     "prefer-destructuring": "off",
-    quotes: ["error", "double", { avoidEscape: true }],
-    radix: "off",
 
     "jsx-a11y/anchor-is-valid": [
       "error",
@@ -103,11 +85,9 @@ module.exports = {
     "import/prefer-default-export": "off",
 
     // Flowtype Rules
-    "flowtype/delimiter-dangle": ["error", "always-multiline"],
     "flowtype/no-dupe-keys": "error",
     "flowtype/no-primitive-constructor-types": "error",
     "flowtype/no-weak-types": "warn",
-    "flowtype/object-type-delimiter": "error",
     "flowtype/require-parameter-type": [
       "warn",
       { excludeArrowFunctions: true }
@@ -122,16 +102,10 @@ module.exports = {
       "always",
       { annotationStyle: "line" }
     ],
-    "flowtype/semi": "error",
     "flowtype/sort-keys": [
       "off",
       "asc",
       { caseSensitive: false, natural: true }
-    ],
-    "flowtype/space-after-type-colon": [
-      "error",
-      "always",
-      { allowLineBreak: true }
     ],
     "flowtype/type-id-match": ["warn", "^([A-Z][a-z0-9]*)+T$"],
 
