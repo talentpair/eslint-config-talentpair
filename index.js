@@ -30,7 +30,11 @@ module.exports = {
     // Airbnb Rule Overrides
     camelcase: "off",
     "func-names": "error",
-    "lines-between-class-members": ["error", "always", { exceptAfterSingleLine: true }],
+    "lines-between-class-members": [
+      "error",
+      "always",
+      { exceptAfterSingleLine: true }
+    ],
     "no-nested-ternary": "off",
     "no-param-reassign": "off",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
@@ -111,7 +115,10 @@ module.exports = {
     "react/no-unused-prop-types": "off",
 
     "react/destructuring-assignment": "off",
-    "react/require-default-props": "error",
+    "react/require-default-props": [
+      "error",
+      { forbidDefaultForRequired: false }
+    ],
     "react/sort-comp": [
       "error",
       {
