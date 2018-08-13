@@ -30,6 +30,8 @@ module.exports = {
     // Airbnb Rule Overrides
     camelcase: "off",
     "func-names": "error",
+    "lines-between-class-members": ["error", "always", { exceptAfterSingleLine: true }],
+    "no-nested-ternary": "off",
     "no-param-reassign": "off",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
     "no-prototype-builtins": "off",
@@ -104,9 +106,12 @@ module.exports = {
     ],
     "flowtype/type-id-match": ["warn", "^([A-Z][a-z0-9]*)+T$"],
 
-    // React Overrides for Flow
-    // These can probably be removed at some point when bugs are worked out
+    // React Overrides
+    // This can probably be removed at some point when bugs are worked out
     "react/no-unused-prop-types": "off",
+
+    "react/destructuring-assignment": "off",
+    "react/require-default-props": "error",
     "react/sort-comp": [
       "error",
       {
