@@ -35,6 +35,8 @@ module.exports = {
       "always",
       { exceptAfterSingleLine: true }
     ],
+    "no-alert": "error",
+    "no-console": "error",
     "no-nested-ternary": "off",
     "no-param-reassign": "off",
     "no-plusplus": ["error", { allowForLoopAfterthoughts: true }],
