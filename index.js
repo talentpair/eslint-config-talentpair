@@ -96,15 +96,6 @@ module.exports = {
     "flowtype/no-dupe-keys": "error",
     "flowtype/no-primitive-constructor-types": "error",
     "flowtype/no-weak-types": "warn",
-    "flowtype/no-weak-types": [
-      "warn",
-      {
-        any: true,
-        mixed: false,
-        Object: true,
-        Function: true
-      }
-    ],
     "flowtype/require-parameter-type": [
       "warn",
       { excludeArrowFunctions: true }
